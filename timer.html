@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>free timer</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;  
+        box-sizing: border-box;
+        }
+      
+        #day{
+            text-align: center;
+            margin-right: 1%;
+            margin-left: 3%;
+        }
+
+
+        #content{
+          
+            margin-top: 2%;
+        }
+      
+
+        .textBoxesOfClock{
+            margin-top: 18px;
+            font-size: 150px;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0);
+            border: 0px;
+            outline: none;
+            color: #99ffcc;
+        }
+
+        #textboxOfCentiSecs{
+            margin-top: 50px;
+            font-size: 100px;
+            width: 100%;
+            text-align: center;
+      
+        }
+        #mainBox{
+            display: flex;
+            flex-direction: row;
+            margin-top: 2%;
+        }
+        #boxes{
+            width: 90%;
+            display: flex;
+            flex-direction: row; 
+        }
+
+
+        #buttonOfStartStop{
+            vertical-align: middle;
+            
+            cursor: pointer;
+            background-color: #99ffcc;
+            color: #006699;
+
+            font-size: 600%;
+            border: 0px;
+            border-radius: 20px;
+            padding: 5px;
+            transition-duration: 0.5s;
+            
+        }
+        #buttonOfStartStop:hover{
+            border: 4px solid #99ffcc;
+            color: #99ffcc;
+            background-color: #06062f;
+        }
+
+
+      
+        .textBoxesOfClock::placeholder{
+            color: #ff99ff;
+        }
+
+        .caption{
+            color: #ff99ff;
+        }
+
+        .dots{
+            font-size: 150px;
+            color: #99ffcc;
+        }
+
+
+    </style>
+   
+</head>
+<body style="background-color: #06062f;">
+
+
+    <div id="content">
+        <div>
+            <h1 class="caption" style="font-size: 60px; text-align: center;">welcome to <span style="font-size: 80px; color: #99ffcc;">free timer</span></h1>
+            <p class="caption" style="text-align: center; font-size: 30px; margin-top: 1%; margin-bottom: 1%;">just set the time and enjoy the timer doing its thing</p>
+            <p class="caption" style="text-align: center; font-size: 20px;  ">if you want a countdown<span style="color: #99ffcc;"> more than 7 days</span> , visit our <a href="https://www.google.com/" target="_blank" style="color: #99ffcc;">pro timer</a> </p>
+            
+        </div>
+
+
+        <div id="mainBox">
+            <div id="day"> 
+                <input type="text" id="textboxOfDays" class="textBoxesOfClock" maxlength="1" placeholder="0"><br><p class="caption" style="font-size: 30px; ">days</p></input>
+            </div>
+    
+            <div id="clock">
+                <div id="boxes">
+                   
+                    <div style="text-align: center;"  >
+                       
+                        
+                            <input type="text" id="textboxOfHours" class="textBoxesOfClock" maxlength="2" placeholder="00"><br><p class="caption"  style="font-size: 30px;">hours</p></input>
+                    
+                        
+
+                    </div>
+                    <div><p class="dots" >:</p></div>
+                    <div style="text-align: center;">
+
+                            <input type="text" id="textboxOfMinutes" class="textBoxesOfClock" maxlength="2" placeholder="00"><br><span class="caption"  style="font-size: 30px;">minutes</span></input>
+                       
+
+                    </div>
+                    <div><p class="dots" >:</p></div>
+                    <div style="text-align: center">
+                        <input type="text" id="textboxOfSeconds" class="textBoxesOfClock" maxlength="2" placeholder="00"><br><span class="caption"  style="font-size: 30px;">seconds</span></input>
+                    </div>
+                    <div><p  class="dots"  style="font-size: 100px; margin-top: 150%;">:</p></div>
+                    <div style="text-align: center">
+                        <input type="text" id="textboxOfCentiSecs" class="textBoxesOfClock" maxlength="0" placeholder="00"><br><span class="caption"  style="font-size: 15px;">centiseconds</span></input>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+
+        <div style="height: 60%; text-align: center; margin-top: 4%;">
+            <button id = "buttonOfStartStop">start</button>
+        </div>
+        
+        
+    </div>
+<script src="timer_js.js"></script>
+    
+</body>
+</html>
